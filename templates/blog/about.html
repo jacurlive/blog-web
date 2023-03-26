@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>About Me</title>
+    <meta name="author" content="Jasur Juraev">
+    <meta property="og:site_name" content="Azimjon's Blog"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description">
+    <meta name="og:image" content="https://azimjon.com/media/2020/04/12/lazyprogrammer.jpg">
+    <link href="{% static "/css/flexgridcombo.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="{% static "/css/style.css" %}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="/blog/static/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<header class="header--title flex align-items-center">
+    <div class="container">
+        <div class="align-items-center flex">
+            <div class="logo-wrapper">
+                <a class="logo" href="{% url 'main' %}">Jasur's Blog</a>
+            </div>
+            <ul class="nav align-items-center">
+{#                <li><a class="list-item" href="/academy/">Academy</a></li>#}
+                <li><a class="list-item" href="{% url 'blog' %}">Blog</a></li>
+{#                <li><a class="list-item" href="/talks/">Talks</a></li>#}
+                <li><a class="list-item" href="https://t.me/s/umine17" target="_blank">Channel</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="bar bar--top"></div>
+                <div class="bar bar--middle"></div>
+                <div class="bar bar--bottom"></div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="progress-bar">
+    <div class="bar"></div>
+</div>
+<section class="flex align-items-center">
+    <div class="container">
+        <div class="row article-wrapper justify-center align-top">
+            <div class="article-header col-md-8">
+                <h1 class="title">About Me</h1>
+            </div>
+            <article class="content col-md-8 col-12">
+                {% if about.image %}
+                    <address style="display: none"><br></address>
+                    <figure>
+                        <div class="figure_wrapper">
+                            <img src="{{ about.image.url }}">
+                        </div>
+                    </figure>
+                {% endif %}
+            {% autoescape off %}
+                <p>{{ about.bio }}</p>
+            {% endautoescape %}
+            </article>
+
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <p>
+                &copy; 2023 jasur.com
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="{% static "/js/ScrollMonitor.min.js" %}"></script>
+<script src="{% static "/js/TweenMax.min.js" %}"></script>
+<script src="{% static "/js/main.js" %}"></script>
+</body>
+</html>

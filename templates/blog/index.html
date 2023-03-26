@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Jasur's Blog</title>
+    <meta name="author" content="Jasur Juraev">
+    <meta property="og:site_name" content="Azimjon's Blog"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description">
+    <meta name="og:image" content="https://azimjon.com/static/images/azimjon.jpg">
+    <link href="{% static '/css/flexgridcombo.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="{% static "/css/style.css" %}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="/blog/static/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<header class="header--title flex align-items-center">
+    <div class="container">
+        <div class="align-items-center flex">
+            <div class="logo-wrapper">
+                <a class="logo" href="{% url 'main' %}">Jasur's Blog</a>
+            </div>
+            <ul class="nav align-items-center">
+                <li><a class="list-item" href="{% url 'blog' %}">Blog</a></li>
+{#                <li><a class="list-item" href="/academy">Academy</a></li>#}
+{#                <li><a class="list-item" href="/talks/">Talks</a></li>#}
+                <li><a class="list-item" href="https://t.me/s/umine17" target="_blank">Channel</a></li>
+            </ul>
+            <div class="burger-menu">
+                <div class="bar bar--top"></div>
+                <div class="bar bar--middle"></div>
+                <div class="bar bar--bottom"></div>
+            </div>
+        </div>
+    </div>
+</header>
+<section id="home" class="flex align-items-center">
+    <div class="container">
+        <div class="row justify-between">
+            <div class="col-xl-8 col-lg-10 col-12 stagger-animation">
+                <div class="about flex align-items-center">
+                    <img class="anim-item profile-picture
+                                align-self-start" src="{% static "image/user-icon.png" %}" alt="Jasur"/>
+                    <div class="about-detail anim-item">
+                        <h1 class="title">{{ about.full_name }}</h1>
+                        <h3 class="desc">{{ about.specialization }}</h3>
+                        <div class="social-links flex
+                                    align-items-center">
+                            <a class="icon-youtube" target="_blank" href="#">
+                                <img src="{% static "/image/youtube.png" %}" width="28"/>
+                            </a>
+                            <a class="icon-linkedin" target="_blank"
+                               href="#">
+                                <img src="{% static "/image/linkedin.svg" %}" width="30"/>
+                            </a>
+                            <a class="icon-telegram" target="_blank" href="#">
+                                <img src="{% static "/image/telegram.svg" %}" width="30"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail">
+                    <p class="size-big anim-item">{{ about.short_bio }}</p>
+                    <div class="btns-wrapper anim-item">
+                        <a href="{% url "blog" %}" class="btn btn-primary">Read Blog</a>
+                        <a href="{% url "about" %}" class="btn btn-secondary">About Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <p>
+                &copy; 2023 jasur.com
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="{% static "/js/ScrollMonitor.min.js" %}"></script>
+<script src="{% static "/js/TweenMax.min.js" %}"></script>
+<script src="{% static "/js/main.js" %}"></script>
+</body>
+</html>
