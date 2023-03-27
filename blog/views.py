@@ -4,13 +4,13 @@ from blog.models import About, Blog
 
 class MainView(ListView):
     template_name = 'blog/index.html'
-    queryset = About.objects.get(specialization='Backend Engineer')
+    queryset = About.objects.get(id=3)
     context_object_name = 'about'
 
 
 class AboutView(ListView):
     template_name = 'blog/about.html'
-    queryset = About.objects.get(specialization='Backend Engineer')
+    queryset = About.objects.get(id=3)
     context_object_name = 'about'
 
 
