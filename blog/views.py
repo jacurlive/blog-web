@@ -16,7 +16,7 @@ class AboutView(ListView):
 
 class BlogView(ListView):
     template_name = 'blog/blog.html'
-    queryset = Blog.objects.all()
+    queryset = Blog.objects.order_by('-created_at')
     context_object_name = 'blogs'
 
 
