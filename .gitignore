@@ -240,7 +240,6 @@ cython_debug/
 #.idea/
 
 /venv
-/db.sqlite
 /media
 .idea
 /blog/migrations
