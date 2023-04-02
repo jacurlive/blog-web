@@ -754,6 +754,7 @@ footer p {
 }
 .article-wrapper {
   padding: 80px 0;
+  margin: -42px;
 }
 @media (max-width: 767.98px) {
   .article-wrapper {
@@ -980,7 +981,7 @@ article pre {
   left: 0;
 }
 .article-wrapper .content figure {
-  margin: 0 0 -198px;
+  margin: 0 0 -155px;
   padding: 0;
   text-align: center;
   position: relative;
