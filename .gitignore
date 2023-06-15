@@ -242,3 +242,4 @@ cython_debug/
 /media
 .idea
 /blog/migrations
+/db.sqlite3
