@@ -18,7 +18,7 @@ class About(Model):
 
 class Blog(Model):
     title = CharField(max_length=255)
-    main_image = ImageField(upload_to='posts/', default=None, null=True)
+    main_image = ImageField(upload_to='posts/', default=None, blank=True)
     content = RichTextField()
     created_at = DateTimeField(auto_now_add=True)
     slug = SlugField(max_length=255, unique=True)
