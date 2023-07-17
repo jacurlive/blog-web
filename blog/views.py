@@ -25,5 +25,3 @@ class BlogDetailView(DetailView):
     query_pk_and_slug = 'slug'
     queryset = Blog.objects.all()
     context_object_name = 'post'
-
-# test text for update git
