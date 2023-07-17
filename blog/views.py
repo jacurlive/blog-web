@@ -1,4 +1,5 @@
-from django.views.generic import TemplateView, ListView, DetailView
+from django.views.generic import ListView, DetailView
+
 from blog.models import About, Blog
 
 
