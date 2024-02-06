@@ -7,7 +7,7 @@ from django.utils.text import slugify
 class About(Model):
     full_name = CharField(max_length=300)
     specialization = CharField(max_length=255)
-    image = ImageField(upload_to='about/', default=None)
+    image = ImageField(upload_to='about/', default=None, blank=True)
     instagram_link = URLField()
     github_link = URLField()
     linkedin_link = URLField()

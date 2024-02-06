@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+@-jr=$0sz8lb=tg$q@-18mx#ur6kxmw65rc!j2dy+#d5f8_w%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
 
     # my apps
-    'blog',
+    'blog'
 ]
 
 MIDDLEWARE = [
@@ -122,12 +122,25 @@ JAZZMIN_UI_TWEAKS = {
     "dark_mode_theme": "cyborg"
 }
 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline', 'Link', 'Unlink', 'Image']
+        ],
+        'width': 900,
+        'height': 300,
+        'forcePasteAsPlainText': True,  # Отключить вставку тегов <p>
+    },
+}
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
 

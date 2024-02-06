@@ -26,7 +26,7 @@
             </div>
             <ul class="nav align-items-center">
                 <li><a class="list-item" href="{% url 'blog' %}">Blog</a></li>
-                <li><a class="list-item" href="#" target="_blank">Channel</a></li>
+                <li><a class="list-item" href="{{ about.telegram_link }}" target="_blank">Channel</a></li>
             </ul>
             <div class="burger-menu">
                 <div class="bar bar--top"></div>
@@ -41,24 +41,29 @@
         <div class="row justify-between">
             <div class="col-xl-8 col-lg-10 col-12 stagger-animation">
                 <div class="about flex align-items-center">
-                    <img class="anim-item profile-picture
-                                align-self-start" src="{% static "image/user-icon.png" %}" alt="Jasur"/>
+                    {% if about.image %}
+                        <img class="anim-item profile-picture
+                        align-self-start" src="{{ about.image.url }}" alt="Jasur"/>
+                    {% else %}
+                        <img class="anim-item profile-picture
+                        align-self-start" src="{% static "image/user-icon.png" %}" alt="Jasur"/>
+                    {% endif %}
                     <div class="about-detail anim-item">
                         <h1 class="title">{{ about.full_name }}</h1>
                         <h3 class="desc">{{ about.specialization }}</h3>
                         <div class="social-links flex
                                     align-items-center">
-                            <a class="icon-youtube" target="_blank" href="#">
+                            <!-- <a class="icon-youtube" target="_blank" href="#">
                                 <img src="{% static "/image/youtube.png" %}" width="28"/>
-                            </a>
+                            </a> -->
                             <a class="icon-linkedin" target="_blank"
-                               href="https://www.linkedin.com/in/jasur-juraev-014661244/">
+                               href="{{ about.linkedin_link }}">
                                 <img src="{% static "/image/linkedin.svg" %}" width="30"/>
                             </a>
-                            <a class="icon-telegram" target="_blank" href="#">
+                            <a class="icon-telegram" target="_blank" href="{{ about.telegram_link }}">
                                 <img src="{% static "/image/telegram.svg" %}" width="30"/>
                             </a>
-                            <a class="icon-telegram" target="_blank" href="https://github.com/jacurlive">
+                            <a class="icon-telegram" target="_blank" href="{{ about.github_link }}">
                                 <img src="{% static "/image/github.svg" %}" width="30"/>
                             </a>
                         </div>
@@ -75,15 +80,15 @@
         </div>
     </div>
 </section>
-{#<footer>#}
-{#    <div class="container">#}
-{#        <div class="row">#}
-{#            <p>#}
-{#                &copy; 2023 jasur.com#}
-{#            </p>#}
-{#        </div>#}
-{#    </div>#}
-{#</footer>#}
+<footer>
+    <div class="container">
+        <div class="row">
+            <p>
+                &copy; jacur.uz
+            </p>
+        </div>
+    </div>
+</footer>
 <script src="{% static "/js/ScrollMonitor.min.js" %}"></script>
 <script src="{% static "/js/TweenMax.min.js" %}"></script>
 <script src="{% static "/js/main.js" %}"></script>

@@ -45,55 +45,58 @@
         <div class="row article-wrapper justify-center align-top">
             <div class="article-header col-md-8">
                 <h1 class="title">{{ post.title }}</h1>
-                <div class="date">
-                    <span>{{ post.created_at }}</span>
-                </div>
+                <span class="date">{{ post.created_at }}</span><br><br>
+                <!-- <div class="date">
+                    <span>{{ post.created_at }}</span><br><br>
+                </div> -->
             </div>
             <article class="content col-md-8 col-12">
                 {% if post.main_image %}
-                <address style="display: none"><br></address>
-                <figure>
-                    <div class="figure_wrapper">
-                        <img src="{{ post.main_image.url }}">
-                    </div>
-                </figure>
+                    <address style="display: none"><br></address>
+                    <figure>
+                        <div class="figure_wrapper">
+                            <img src="{{ post.main_image.url }}">
+                        </div>
+                    </figure>
                 {% endif %}
             {% autoescape off %}
+            <div>
                 <p>{{ post.content }}</p>
+            </div>
             {% endautoescape %}
             </article>
-{#            <div class="div col-lg-7 col-md-8 col-12">#}
-{#                <div class="subscribe-form " id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">#}
-{#                    <h6>NEWSLETTER</h6>#}
-{#                    <p>#}
-{#                        Subscribe to <a href="https://t.me/umine17">@umine17</a>#}
-{#                        telegram channel where I share my new courses, articles, talks and more.#}
-{#                    </p>#}
-{#                </div>#}
-{#            </div>#}
-{#            <ul class="custom-pagination col-md-8 col-12">#}
-{#                <div class="pagination-list row">#}
-{#                    <li class="col prev">#}
-{#                        <a href="#" title="">&larr; Previous</a>#}
-{#                    </li>#}
-{#                    <li class="col"><a href="{% url 'blog' %}">See More</a></li>#}
-{#                    <li class="col next">#}
-{#                        <a href="#" title="">Next &rarr;</a>#}
-{#                    </li>#}
-{#                </div>#}
-{#            </ul>#}
+            <!-- <div class="div col-lg-7 col-md-8 col-12">
+                <div class="subscribe-form " id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+                    <h6>NEWSLETTER</h6>
+                    <p>
+                        Subscribe to <a href="https://t.me/umine17">@umine17</a>
+                        telegram channel where I share my new courses, articles, talks and more.
+                    </p>
+               </div>
+            </div> -->
+            <!-- <ul class="custom-pagination col-md-8 col-12">
+                <div class="pagination-list row">
+                    <li class="col prev">
+                        <a href="#" title="">&larr; Previous</a>
+                    </li>
+                    <li class="col"><a href="{% url 'blog' %}">See More</a></li>
+                    <li class="col next">
+                        <a href="#" title="">Next &rarr;</a>
+                    </li>
+                </div>
+            </ul> -->
         </div>
     </div>
 </section>
-{#<footer>#}
-{#    <div class="container">#}
-{#        <div class="row">#}
-{#            <p>#}
-{#                &copy; 2023 jasur.com#}
-{#            </p>#}
-{#        </div>#}
-{#    </div>#}
-{#</footer>#}
+<footer>
+    <div class="container">
+        <div class="row">
+            <p>
+                &copy; jacur.uz
+            </p>
+        </div>
+    </div>
+</footer>
 <script src="{% static "/js/ScrollMonitor.min.js" %}"></script>
 <script src="{% static "/js/TweenMax.min.js" %}"></script>
 <script src="{% static "/js/main.js" %}"></script>
