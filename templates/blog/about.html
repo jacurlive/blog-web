@@ -48,14 +48,14 @@
                 <h1 class="title">About Me</h1>
             </div>
             <article class="content col-md-8 col-12">
-                {% if about.image %}
+                <!-- {% if about.image %}
                     <address style="display: none"><br></address>
                     <figure>
                         <div class="figure_wrapper">
                             <img src="{{ about.image.url }}">
                         </div>
                     </figure>
-                {% endif %}
+                {% endif %} -->
             {% autoescape off %}
                 <p>{{ about.bio }}</p>
             {% endautoescape %}

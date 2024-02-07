@@ -61,7 +61,7 @@
                 {% endif %}
             {% autoescape off %}
             <div>
-                <p>{{ post.content }}</p>
+                <p>{{ post.content|safe }}</p>
             </div>
             {% endautoescape %}
             </article>

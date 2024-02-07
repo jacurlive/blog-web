@@ -5,7 +5,7 @@ from blog.models import About, Blog
 
 
 @admin.register(About)
-class AboutAdmin(ModelAdmin):
+class AboutAdmin(SummernoteModelAdmin):
     fields = ('full_name', 'image', 'specialization', 'instagram_link', 'github_link', 'linkedin_link', 'telegram_link',
               'short_bio', 'bio')
     list_display = ('id', 'full_name', 'specialization', 'short_bio')
@@ -15,10 +15,6 @@ class AboutAdmin(ModelAdmin):
 class BlogAdmin(SummernoteModelAdmin):
     fields = ('title', 'main_image', 'content')
     list_display = ('title', 'created_at')
-
-# class PostAdmin(SummernoteModelAdmin):
-#     summernote_fields = ('blog_blog',)
-
 
 
 admin.site.register(Blog, BlogAdmin)
