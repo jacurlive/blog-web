@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.contrib.admin import ModelAdmin
+from django_summernote.admin import SummernoteModelAdmin
 from blog.models import About, Blog
 
 
@@ -10,7 +11,14 @@ class AboutAdmin(ModelAdmin):
     list_display = ('id', 'full_name', 'specialization', 'short_bio')
 
 
-@admin.register(Blog)
-class BlogAdmin(ModelAdmin):
+
+class BlogAdmin(SummernoteModelAdmin):
     fields = ('title', 'main_image', 'content')
     list_display = ('title', 'created_at')
+
+# class PostAdmin(SummernoteModelAdmin):
+#     summernote_fields = ('blog_blog',)
+
+
+
+admin.site.register(Blog, BlogAdmin)

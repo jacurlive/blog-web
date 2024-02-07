@@ -1,5 +1,3 @@
-from ckeditor.fields import RichTextField
-from ckeditor_uploader.fields import RichTextUploadingField
 from django.db.models import Model, CharField, URLField, TextField, DateTimeField, SlugField, ImageField
 from django.utils.text import slugify
 
@@ -13,13 +11,13 @@ class About(Model):
     linkedin_link = URLField()
     telegram_link = URLField()
     short_bio = TextField()
-    bio = RichTextUploadingField()
+    bio = TextField()
 
 
 class Blog(Model):
     title = CharField(max_length=255)
     main_image = ImageField(upload_to='posts/', default=None, blank=True)
-    content = RichTextField()
+    content = TextField()
     created_at = DateTimeField(auto_now_add=True)
     slug = SlugField(max_length=255, unique=True)
 
