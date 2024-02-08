@@ -13,7 +13,7 @@ class AboutAdmin(SummernoteModelAdmin):
 
 
 class BlogAdmin(SummernoteModelAdmin):
-    fields = ('title', 'main_image', 'content')
+    fields = ('title', 'content')
     list_display = ('title', 'created_at')
 
 
