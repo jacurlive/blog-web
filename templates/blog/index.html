@@ -70,7 +70,7 @@
                     </div>
                 </div>
                 <div class="detail">
-                    <p class="size-big anim-item">{{ about.short_bio }}</p>
+                    <p class="size-big anim-item">{{ about.short_bio|safe }}</p>
                     <div class="btns-wrapper anim-item">
                         <a href="{% url "blog" %}" class="btn btn-primary">Read Blog</a>
                         <a href="{% url "about" %}" class="btn btn-secondary">About Me</a>
