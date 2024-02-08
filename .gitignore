@@ -241,5 +241,7 @@ cython_debug/
 /venv
 /media
 .idea
-/blog/migrations
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
 *.sqlite3

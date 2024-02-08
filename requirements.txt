@@ -2,6 +2,8 @@ aiohttp==3.7.4
 asgiref==3.6.0
 async-timeout==3.0.1
 attrs==22.2.0
+backports.zoneinfo==0.2.1
+bleach==6.1.0
 bson==0.5.10
 certifi==2019.9.11
 chardet==3.0.4
@@ -9,9 +11,9 @@ click==8.0.3
 colorama==0.4.6
 commonmark==0.9.1
 Django==4.1.6
-django-ckeditor==6.5.1
 django-jazzmin==2.6.0
 django-js-asset==2.0.0
+django-summernote==0.8.20.0
 idna==3.4
 jprq==2.1.0
 multidict==6.0.4
@@ -21,6 +23,7 @@ python-dateutil==2.8.2
 rich==10.14.0
 six==1.16.0
 sqlparse==0.4.3
-typing_extensions==4.5.0
+typing-extensions==4.5.0
+webencodings==0.5.1
 websockets==9.1
 yarl==1.8.2
