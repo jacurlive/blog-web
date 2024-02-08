@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Jasur's Blog</title>
+    <meta name="author" content="Jasur Juraev">
+    <meta property="og:site_name" content="Azimjon's Blog"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description">
+    <meta name="og:image" content="https://azimjon.com/static/images/azimjon.jpg">
+    <link href="{% static '/css/flexgridcombo.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="{% static "/css/style.css" %}" rel="stylesheet">
+    <link href="{% static "/css/post.css" %}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="/blog/static/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header class="header--title flex align-items-center">
+        <div class="container">
+            <div class="align-items-center flex">
+                <div class="logo-wrapper">
+                    <a class="logo" href="{% url 'main' %}">Jasur's Blog</a>
+                </div>
+                <ul class="nav align-items-center">
+                    <li><a class="list-item" href="{% url 'blog' %}">Blog</a></li>
+                    <li><a class="list-item" href="{{ about.telegram_link }}" target="_blank">Channel</a></li>
+                </ul>
+                <div class="burger-menu">
+                    <div class="bar bar--top"></div>
+                    <div class="bar bar--middle"></div>
+                    <div class="bar bar--bottom"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="add-post">
+            {{ form.as_p }}
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

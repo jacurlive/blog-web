@@ -51,14 +51,14 @@
                 </div> -->
             </div>
             <article class="content col-md-8 col-12">
-                {% if post.main_image %}
+                <!-- {% if post.main_image %}
                     <address style="display: none"><br></address>
                     <figure>
                         <div class="figure_wrapper">
                             <img src="{{ post.main_image.url }}">
                         </div>
                     </figure>
-                {% endif %}
+                {% endif %} -->
             {% autoescape off %}
             <div>
                 <p>{{ post.content|safe }}</p>
