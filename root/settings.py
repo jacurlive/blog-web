@@ -27,9 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
-CORS_ORIGIN_WHITELIST = [
-    "https://jacur.uz",
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.jacur.uz",
+    "http://*.jacur.uz",
 ]
 
 
