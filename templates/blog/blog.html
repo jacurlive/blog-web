@@ -51,7 +51,7 @@
                     {% for blog in blogs %}
                         <li>
                             <a class="list-item" href="{% url 'post' blog.slug %}">
-                                <div class="date">{{ blog.created_at }}</div>
+                                <div class="date">{{ blog.created_at|date:"M. j, Y" }}</div>
                                 <div class="title">{{ blog.title }}</div>
                             </a>
                         </li>

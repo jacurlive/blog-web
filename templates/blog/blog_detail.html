@@ -45,7 +45,7 @@
         <div class="row article-wrapper justify-center align-top">
             <div class="article-header col-md-8">
                 <h1 class="title">{{ post.title }}</h1>
-                <span class="date">{{ post.created_at }}</span><br><br>
+                <span class="date">{{ post.created_at|date:"M. j, Y" }}</span><br><br>
                 <!-- <div class="date">
                     <span>{{ post.created_at }}</span><br><br>
                 </div> -->
